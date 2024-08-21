@@ -1,5 +1,6 @@
 ﻿using Movie_Database;
 
+bool dontStop = true;
 List<Movie> movieTheatre = new List<Movie>()
 {
     new Movie("Apocalypto", "Action/Adventure"),
@@ -30,26 +31,22 @@ foreach (string g in movieGenres)
 }
 string userChoice = Console.ReadLine().Trim().ToLower();
 
-while (true)
+while (dontStop)
 {
     Console.Write("Comedy or adventure?   ");
-    string clarification = Console.ReadLine().Trim().ToLower(); 
+    string clarification = Console.ReadLine().Trim().ToLower();
     if (userChoice.Contains("action"))
     {
         if (clarification.Contains("adventure"))
         {
-            foreach (Movie m in movieTheatre)
-            {
-                Console.WriteLine(movieTheatre[0]);
-                Console.WriteLine(movieTheatre[2]);
-            }
+            //Console.WriteLine(Movie[0]);
+            Console.WriteLine(movieTheatre[2]);
+            dontStop = !true;
         }
         else if (clarification.Contains("comedy"))
         {
-            foreach (Movie m in movieTheatre)
-            {
-                Console.WriteLine(movieTheatre[9]);
-            }
+            Console.WriteLine(movieTheatre[9]);
+            dontStop = !true;
         }
         else
         {
@@ -57,6 +54,54 @@ while (true)
             break;
         }
     }
+}        
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//                                                         CODE GRAVEYARD 
+
+/*
+List<Movie> sortedMovies = movieTheatre.OrderBy(m => m.Category).ToList();
+   for (int s = 0; s < movieTheatre.Count(); s++) 
+   {
+       Console.WriteLine(movieTheatre[s]);
+   }
+
+Dictionary<string, string> newMovieTheatre = new Dictionary<string, string>();
+newMovieTheatre.Add("Apocalypto", "Action/Adventure");
+newMovieTheatre.Add("Everything Everywhere All at Once", "Sci-Fi");
+newMovieTheatre.Add("City of God", "Action/Adventure");
+newMovieTheatre.Add("Clerks II", "Comedy");
+newMovieTheatre.Add("Jackpot", "Comedy");
+newMovieTheatre.Add("Crazy Rich Asians", "Rom-Com");
+newMovieTheatre.Add("Definitely, Maybe", "Rom-Com");
+newMovieTheatre.Add("Altered Carbon", "Sci-Fi");
+newMovieTheatre.Add("Dark", "Sci-Fi");
+newMovieTheatre.Add("Mr. & Mrs. Smith (BUT THE REBOOT)", "Action/Comedy");
+/*
+foreach (KeyValuePair<string, string> kvp in newMovieTheatre)
+{
+    Console.WriteLine(kvp.Key);
 }
 
 
+foreach (KeyValuePair<string, string> kvp in newMovieTheatre)
+{
+    if (userChoice.Contains("sci"))
+    {
+        Console.WriteLine(kvp.Key[1]);
+        Console.WriteLine(kvp.Key[7]);
+        Console.WriteLine(kvp.Key[8]);
+    }
+    else if (userChoice.Contains("com"))
+    {
+        Console.WriteLine(kvp.Key[3]);
+        Console.WriteLine(kvp.Key[4]);
+    }
+    else if (userChoice.Contains("rom"))
+    {
+        Console.WriteLine(kvp.Key[5]);
+        Console.WriteLine(kvp.Key[6]);
+    }
+}
+*/

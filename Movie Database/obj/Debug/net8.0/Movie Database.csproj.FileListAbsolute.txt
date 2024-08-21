@@ -12,3 +12,4 @@
 /Users/jefebadquez/Desktop/Grand_Circus/C# Deliverables/Labs/Movie Database/Movie Database/obj/Debug/net8.0/Movie Database.pdb
 /Users/jefebadquez/Desktop/Grand_Circus/C# Deliverables/Labs/Movie Database/Movie Database/obj/Debug/net8.0/Movie Database.genruntimeconfig.cache
 /Users/jefebadquez/Desktop/Grand_Circus/C# Deliverables/Labs/Movie Database/Movie Database/obj/Debug/net8.0/ref/Movie Database.dll
+/Users/jefebadquez/Desktop/Grand_Circus/C# Deliverables/Labs/Movie Database/Movie Database/obj/Debug/net8.0/Movie Database.sourcelink.json
